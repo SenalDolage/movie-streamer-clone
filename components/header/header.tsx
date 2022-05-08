@@ -20,13 +20,15 @@ export const Header = ({ title = 'Movie Streamer Clone' }: Props) => (
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
 
-        <header className="sticky bg-primary w-full h-20 top-0 left-0 z-10 flex items-center px-10 md:px-12 ">
-            <Image
-                src="/images/logo.svg"
-                className="cursor-pointer"
-                width={80}
-                height={80}
-            />
+        <header className="sticky bg-primary w-full h-20 top-0 left-0 z-10 flex items-center justify-between px-10 md:px-12">
+            <div className="logo">
+                <Image
+                    src="/images/logo.svg"
+                    className="cursor-pointer"
+                    width={80}
+                    height={80}
+                />
+            </div>
 
             <div className="nav-wrap">
                 <nav className="hidden ml-10 md:flex items-center space-x-6">
@@ -75,7 +77,7 @@ export const Header = ({ title = 'Movie Streamer Clone' }: Props) => (
             </div>
 
             <div className="login-wrap">
-                <button className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-primary transition duration-200">Login</button>
+                <button className="uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-primary transition duration-200">Login</button>
             </div>
         </header>
     </>
