@@ -9,7 +9,18 @@ module.exports = {
       secondary: '#3f3cbb',
       white: '#f9f9f9'
     },
-    extend: {},
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
+    extend: {
+      backgroundImage: (theme) => ({
+        home: "url('/images/background.png')",
+      }),
+    },
   },
   plugins: [],
 }
