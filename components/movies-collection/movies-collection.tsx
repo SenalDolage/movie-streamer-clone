@@ -1,16 +1,19 @@
+import { Movie } from '../../interfaces';
+import { MovieThumbnail } from '../movie-thumbnail/movie-thumbnail'
+
 type MoviesCollectionProps = {
-    movies: [];
+    movies: Movie[];
     title: string;
 }
 
 export const MoviesCollection = ({ movies, title }: MoviesCollectionProps) => {
     return (
         <section className="relative flex flex-col space-y-2 my-10 px-8 max-w-screen-xl mx-auto">
-            <h2 className="font-semibold">{title}</h2>
+            <h2 className="text-base font-semibold uppercase">{title}</h2>
             <div className="flex space-x-6 overflow-y-hidden overflow-x-scroll scrollbar-hide p-2 -m-2">
-                {/* {results.map((result) => (
-            <MovieThumbnail key={result.id} result={result} />
-          ))} */}
+                {movies.map((result) => (
+                    <MovieThumbnail key={result.id} movie={result} />
+                ))}
             </div>
         </section>
     )
