@@ -16,6 +16,8 @@ Detail Page where user can see additional info on the selected movie
 
 [![screenshot-localhost-3000-2022-05-16-23-26-37.png](https://i.postimg.cc/vH7WBN8V/screenshot-localhost-3000-2022-05-16-23-26-37.png)](https://postimg.cc/w7vt4Fmq)
 
+[![screenshot-movie-streamer-clone-vercel-app-2022-05-16-23-50-57.png](https://i.postimg.cc/057z9KZW/screenshot-movie-streamer-clone-vercel-app-2022-05-16-23-50-57.png)](https://postimg.cc/238kw6sh)
+
 ## Getting Started
 
 First, run the development server:
