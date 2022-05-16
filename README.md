@@ -1,14 +1,34 @@
-# TypeScript Next.js example
+# Movie Streamer Clone
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+This is a Movie Streamer Clone project which is similar to Disney, built using Next.js with TypeScript and TailwindCSS. [NextAuth.js](https://next-auth.js.org/) was used to secure pages server side. The data used for this project was taken by [TMDB](https://www.themoviedb.org/). 
 
-## Deploy your own
+## Screenshots
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+Landing Page that will be shown to user before logging in
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+[![screenshot-movie-streamer-clone-vercel-app-2022-05-16-23-21-52.png](https://i.postimg.cc/KjRBsq79/screenshot-movie-streamer-clone-vercel-app-2022-05-16-23-21-52.png)](https://postimg.cc/SYbnnGv8)
 
-## How to use it?
+Home Page with listing on trending movies and shows
+
+[![screenshot-localhost-3000-2022-05-16-23-25-18.png](https://i.postimg.cc/RZRQPbjB/screenshot-localhost-3000-2022-05-16-23-25-18.png)](https://postimg.cc/8776cwpK)
+
+Detail Page where user can see additional info on the selected movie
+
+[![screenshot-localhost-3000-2022-05-16-23-26-37.png](https://i.postimg.cc/vH7WBN8V/screenshot-localhost-3000-2022-05-16-23-26-37.png)](https://postimg.cc/w7vt4Fmq)
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Starter template
 
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
@@ -20,24 +40,4 @@ yarn create next-app --example with-typescript with-typescript-app
 pnpm create next-app -- --example with-typescript with-typescript-app
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
