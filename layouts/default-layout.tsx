@@ -2,12 +2,13 @@ import { ReactNode } from 'react'
 import { Header } from '../components'
 
 type Props = {
-    children?: ReactNode
+    children?: ReactNode;
+    headerTitle?: string;
 }
 
-const DefaultLayout = ({ children }: Props) => (
+const DefaultLayout = ({ children, headerTitle }: Props) => (
     <div>
-        <Header />
+        <Header title={headerTitle} />
         {children}
     </div>
 )
