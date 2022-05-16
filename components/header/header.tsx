@@ -24,7 +24,7 @@ export const Header = ({ title = 'Movie Streamer Clone' }: HeaderProps) => {
                 <title>{title}</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="description" content="This is a Movie Streamer Clone which is similar to Disney. Built using NextJS, TypeScript and TailwindCSS by Senal Dolage"></meta>
+                <meta name="description" content="This is a Movie Streamer Clone which is similar to Disney, built using NextJS, TypeScript and TailwindCSS by Senal Dolage"></meta>
             </Head>
 
             <header className="sticky bg-primary w-full top-0 left-0 z-10 ">
