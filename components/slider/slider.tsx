@@ -2,9 +2,9 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-export const Slider = () => {
+export const HeroSlider = () => {
     return (
-        <section className="relative mt-7 shadow-2xl max-w-screen-2xl mx-auto">
+        <section className="relative shadow-2xl max-w-screen-2xl mx-auto">
             <Carousel
                 autoPlay
                 infiniteLoop
