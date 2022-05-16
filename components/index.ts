@@ -1,6 +1,6 @@
 export { Header } from "./header/header";
 export { Footer } from "./footer/footer";
-export { HeroSlider } from "./slider/slider";
+export { HeroSlider } from "./hero-slider/hero-slider";
 export { BrandLogos } from "./brand-logos/brand-logos";
 export { MoviesCollection } from "./movies-collection/movies-collection";
 export { ShowsCollection } from "./shows-collection/shows-collection";
