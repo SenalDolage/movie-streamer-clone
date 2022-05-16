@@ -1,15 +1,15 @@
 import { ReactNode } from 'react'
-import { Header, Footer } from '../components'
+import { Header } from '../components'
 
 type Props = {
-    children?: ReactNode
+    children?: ReactNode;
+    headerTitle?: string;
 }
 
-const DefaultLayout = ({ children }: Props) => (
-    <div>
-        <Header />
+const DefaultLayout = ({ children, headerTitle }: Props) => (
+    <div className="default-layout">
+        <Header title={headerTitle} />
         {children}
-        <Footer />
     </div>
 )
 
