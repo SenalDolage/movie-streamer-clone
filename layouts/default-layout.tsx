@@ -7,7 +7,7 @@ type Props = {
 }
 
 const DefaultLayout = ({ children, headerTitle }: Props) => (
-    <div>
+    <div className="default-layout">
         <Header title={headerTitle} />
         {children}
     </div>
