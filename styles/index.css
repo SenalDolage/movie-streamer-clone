@@ -6,6 +6,18 @@
     body {
         @apply bg-primary text-white;
     }
+
+    ::-webkit-scrollbar {
+        @apply w-2 h-2;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #3b3b3b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #5f5f5f;
+    }
 }
 
 @layer components {
