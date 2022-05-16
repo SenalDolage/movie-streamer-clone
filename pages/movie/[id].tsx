@@ -126,6 +126,15 @@ export async function getServerSideProps(context) {
 
     const request = await fetch(`${tmdbBaseUrl}/movie/${id}?api_key=${tmdbKey}&language=en-US&append_to_response=videos,images`).then(response => response.json());
 
+    if (!session) {
+        return {
+            redirect: {
+                destination: `/api/auth/signin?callbackUrl=/movie/${request.id}`,
+                permanent: false
+            }
+        }
+    }
+
     return {
         props: {
             session,

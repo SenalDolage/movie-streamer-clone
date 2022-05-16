@@ -1,9 +1,10 @@
+import { getSession } from "next-auth/react";
 import Image from "next/image";
 
 import DefaultLayout from '../layouts/default-layout'
 
 const WelcomePage = () => (
-    <DefaultLayout headerTitle="Movie Streamer Clone | Login">
+    <DefaultLayout headerTitle="Movie Streamer Clone | Welcome">
         <div className="relative min-h-[calc(100vh-72px)]">
             <Image
                 src="/images/hero-background.jpg"
@@ -38,5 +39,23 @@ const WelcomePage = () => (
     </DefaultLayout>
 )
 
-
 export default WelcomePage
+
+export async function getServerSideProps(context) {
+    const session = await getSession(context);
+
+    if (session) {
+        return {
+            redirect: {
+                destination: `/`,
+                permanent: false
+            }
+        }
+    }
+
+    return {
+        props: {
+            session
+        }
+    };
+}

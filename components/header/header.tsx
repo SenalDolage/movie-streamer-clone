@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { HomeIcon } from "@heroicons/react/solid";
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from "next/router";
 
 type HeaderProps = {
     title?: string
@@ -10,6 +11,12 @@ type HeaderProps = {
 
 export const Header = ({ title = 'Movie Streamer Clone' }: HeaderProps) => {
     const { data: session } = useSession();
+    const router = useRouter();
+
+    const handleSignOut = async () => {
+        await signOut();
+        router.push('/welcome')
+    }
 
     return (
         <>
@@ -73,7 +80,7 @@ export const Header = ({ title = 'Movie Streamer Clone' }: HeaderProps) => {
                                     />
                                     : ''
                                 }
-                                <button className="uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-primary transition duration-200" onClick={() => signOut()}>
+                                <button className="uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-primary transition duration-200" onClick={() => handleSignOut()}>
                                     Log Out
                                 </button>
                             </div>

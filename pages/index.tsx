@@ -1,5 +1,6 @@
 import MasterLayout from '../layouts/master-layout'
 import { HeroSlider, BrandLogos, MoviesCollection, ShowsCollection } from '../components'
+import { getSession } from 'next-auth/react'
 
 const IndexPage = ({
   popularMovies,
@@ -8,7 +9,7 @@ const IndexPage = ({
   topRatedShows,
 }) => {
   return (
-    <MasterLayout>
+    <MasterLayout headerTitle="Movie Streamer Clone | Home">
       <HeroSlider />
       <BrandLogos />
       <MoviesCollection movies={popularMovies} title="Popular Movies" />
@@ -21,7 +22,8 @@ const IndexPage = ({
 
 export default IndexPage
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
   const tmdbBaseUrl = process.env.TMDB_API_BASE_URL;
   const tmdbKey = process.env.TMDB_API_KEY;
 
@@ -46,6 +48,15 @@ export async function getServerSideProps() {
       topRatedMoviesRes.json(),
       topRatedShowsRes.json(),
     ]);
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: `/welcome`,
+        permanent: false
+      }
+    }
+  }
 
   return {
     props: {
